@@ -12,6 +12,12 @@ const removeTvShow = title => {
     }
 }
 
+const getShows = () => {
+    return {
+        type: "GET_SHOWS"
+    }
+}
+
 const initialState = ["Rick & Morty", "The Simpsons", "Family Guy"];
 
 const tvShowReducer = (tvShows = initialState, action) => {
@@ -20,9 +26,11 @@ const tvShowReducer = (tvShows = initialState, action) => {
             return [...tvShows, action.payload];
         case "REMOVE_TVSHOW":
             return tvShows.filter(tvShow => tvShow !== action.payload);
+        case "GET_SHOWS":
+            return tvShows
         default:
             return tvShows;
     }
 }
 
-module.exports = { addTvShow, removeTvShow, tvShowReducer }
+module.exports = { addTvShow, removeTvShow, tvShowReducer, getShows }

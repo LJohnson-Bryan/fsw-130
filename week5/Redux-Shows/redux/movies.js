@@ -12,6 +12,12 @@ const removeMovie = title => {
     }
 }
 
+const getMovies = () => {
+    return {
+        type: "GET_MOVIES"
+    }
+}
+
 const initialState = ["Fast & Furious", "Star Wars: Return of the Jedi"];
 
 const movieReducer = (movies = initialState, action) => {
@@ -20,9 +26,11 @@ const movieReducer = (movies = initialState, action) => {
             return [...movies, action.payload];
         case "REMOVE_MOVIE":
             return movies.filter(movie => movie !== action.payload);
+        case "GET_MOVIES":
+            return movies;
         default:
             return movies;
     }
 }
 
-module.exports = { addMovie, removeMovie, movieReducer }
+module.exports = { addMovie, removeMovie, movieReducer, getMovies }
