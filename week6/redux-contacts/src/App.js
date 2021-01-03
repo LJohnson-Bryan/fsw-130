@@ -37,7 +37,7 @@ const {removeContact, addContact} = props;
       <div className="content">
       {props.contacts.map(person =>
         <Card name={person.name} age={person.age} email={person.email} _id={person._id}>
-           <Button onClick={() => { 
+          <Button onClick={() => { 
                 removeContact(person.name)
             }}>Delete</Button>
         </Card>
