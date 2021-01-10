@@ -1,0 +1,23 @@
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.transaction {
+    margin: 25px auto;
+    display: block;
+    width: 100%;
+}
+
+.transaction > h2, h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.transaction > h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}

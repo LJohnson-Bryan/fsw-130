@@ -1,0 +1,52 @@
+.grid-admin {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1.5fr;
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-name {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    margin-left: 3px;
+}
+
+.ml-3 {
+    margin-left: 3px;
+}
+
+.quick-action > a {
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    color: #127FBF;
+}
+
+.quick-action > a:hover {
+    color: #0B69A3;
+}
+
+.contacts > h4 {
+    font-size: 16px;
+    color: #486581;
+}
+
+@media only screen and (max-width: 700px) {
+    .grid-admin {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .grid-admin {
+        grid-template-columns: 1fr;
+    }
+}
+
