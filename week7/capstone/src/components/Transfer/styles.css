@@ -4,7 +4,7 @@
 }
 
 .transfer-form > input {
-    padding: 28px 14px;
+    padding: 16px 14px;
     border-radius: 9999px;
     outline: none;
     border: none;
@@ -14,13 +14,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
+    text-align: center;
+    font-size: 14px;
 }
 
 .rel-input {
     position: relative;
-    margin-left: -140px;
-    bottom: -16px;
+    font-size: 14px;
 }
 
 .btn-center {
@@ -28,4 +29,20 @@
     display: block;
     margin-right: auto;
     margin-top: 35px;
+}
+
+.transaction {
+    padding: 30px;
+    max-width: 450px;
+}
+
+.gray-bg {
+    background-color: rgb(230, 230, 230);
+}
+
+@media only screen and (max-width: 780px) {
+    .gray-bg {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
 }

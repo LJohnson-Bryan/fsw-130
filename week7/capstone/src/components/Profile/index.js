@@ -6,8 +6,11 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 import Footer from '../Footer';
 import TransactionCard from '../TransactionCard';
+import commaNumber from 'comma-number';
 
 const Profile = () => {
+    let cardAlter = 1;
+
     return ( 
         <>
         <BankContextConsumer>
@@ -25,10 +28,13 @@ const Profile = () => {
                             </div>
                         </div>
                         <div>
-                            <h2>Balance: ${context.state.profiles[0].balance}</h2>
+                            <h2>Balance: ${commaNumber(context.state.profiles[0].balance)}</h2>
                             
                             <h3>Recent Transactions:</h3>
-                            {context.state.profiles[0].transactions.map(item => <TransactionCard to={item.to} for={item.for} amount={item.amount} />)}
+                            {context.state.profiles[0].transactions.map(item => {
+                                cardAlter = cardAlter * -1;
+                                return <TransactionCard to={item.to} for={item.for} amount={item.amount} alternate={cardAlter} />
+                            })}
                         </div>
                         <div className="contacts">
                             <h2>Contacts</h2>
